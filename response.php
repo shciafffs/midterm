@@ -23,7 +23,13 @@
     ?>
     </head>
     <body>
-        <?php 
+        <?php
+        
+        echo $sql;
+        echo $result;
+        echo $request;
+
+
         foreach($result as $row) {
             echo "There are {$row['num_items']} {$row['product_name']} left in stock!";
         }
