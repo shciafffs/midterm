@@ -5,7 +5,7 @@
             $server="localhost";
             $username="alessio";
             $password="Password01";
-            $database="Products";
+            $database="userinfo";
             $conn=mysqli_connect($server, $username, $password, $database);
 
             $request=htmlspecialchars($_POST['product_name']);
