@@ -26,12 +26,13 @@
         <?php
         
         echo $sql;
-        echo $result;
         echo $request;
+        echo var_dump($result);
 
 
-        foreach($result as $row) {
-            echo "There are {$row['num_items']} {$row['product_name']} left in stock!";
+        foreach($result as $row)
+        {
+            echo "There are {$row['num_items']} {$request} left in stock!";
         }
         ?>
     </body>
