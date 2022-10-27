@@ -13,23 +13,12 @@
 
             $sql="SELECT num_items FROM Products WHERE product_name='{$request}';";
             $result=mysqli_query($conn, $sql);
-            if ($result) {
-                echo "New record created successfully";
-            } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-            }
 
             mysqli_close($conn);
     ?>
     </head>
     <body>
         <?php
-        
-        echo $sql;
-        echo $request;
-        echo var_dump($result);
-
-
         foreach($result as $row)
         {
             echo "There are {$row['num_items']} {$request} left in stock!";
