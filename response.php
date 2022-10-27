@@ -11,7 +11,7 @@
             $request=htmlspecialchars($_POST['product_name']);
 
 
-            $sql="SELECT * FROM Products;";
+            $sql="SELECT num_items FROM Products WHERE product_name='{$request}';";
             $result=mysqli_query($conn, $sql);
             if ($result) {
                 echo "New record created successfully";
@@ -23,11 +23,6 @@
     ?>
     </head>
     <body>
-        <p>Your First Name is: <?= htmlspecialchars($_POST['FNAME']) ?></p><br>
-        <p>Your Last Name is: <?= htmlspecialchars($_POST['LNAME']) ?></p><br>
-        <p>Your UserName is: <?= htmlspecialchars($_POST['USERNAME']) ?></p><br>
-        <p>Your Password is: <?= htmlspecialchars($_POST['PASSWORD']) ?></p><br>
-        <p>Your Gender is: <?= $sex ?></p><br>
-        <p>Your Conditions are: <?= htmlspecialchars($_POST['CONDITIONS']) ?></p><br>
+        <p>There are <?= echo $result . $request . "in stock!" ?></p><br>
     </body>
 </html>
