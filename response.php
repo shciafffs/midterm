@@ -8,7 +8,7 @@
             $database="userinfo";
             $conn=mysqli_connect($server, $username, $password, $database);
 
-            $request=htmlspecialchars($_POST['product_name']);
+            $request=htmlspecialchars($_POST["product_name"]);
 
 
             $sql="SELECT num_items FROM Products WHERE product_name='{$request}';";
