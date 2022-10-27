@@ -23,6 +23,6 @@
     ?>
     </head>
     <body>
-        <p>There are <?= echo $result . $request . "in stock!" ?></p><br>
+        <p>There are <?php echo "$result . $request . 'in stock!'" ?></p><br>
     </body>
 </html>
